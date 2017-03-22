@@ -1,19 +1,175 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.kelly.raspberrypi.MainActivity">
+    tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:text="Local Prayer Time"
+        android:textSize="180sp"
+        android:layout_centerHorizontal="true" />
 
-</android.support.constraint.ConstraintLayout>
+    <TextView
+        android:id="@+id/mosque_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mosque name"
+        android:textSize="100sp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/title"
+        />
+    <TextView
+        android:id="@+id/current_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Current Time"
+        android:textSize="100sp"
+        android:paddingLeft="100dp"
+        android:layout_alignBaseline="@+id/fajir"
+        android:layout_alignBottom="@+id/fajir"
+        android:layout_alignParentStart="true" />
+    <ImageView
+        android:id="@+id/mosque_pic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/mosque"
+        android:layout_marginTop="129dp"
+        android:layout_marginEnd="85dp"
+        android:layout_below="@+id/current_time"
+        android:layout_alignEnd="@+id/current_time"
+        android:layout_alignParentBottom="true" />
+    <TextView
+        android:id="@+id/fajir"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fajir"
+        android:textSize="100sp"
+        android:layout_below="@id/mosque_name"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:layout_marginRight="100dp"
+        />
+    <TextView
+        android:id="@+id/zuhr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Zuhr"
+        android:textSize="100sp"
+        android:layout_below="@id/current_time"
+        android:layout_alignStart="@id/fajir"
+        />
+    <TextView
+        android:id="@+id/asr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Asr"
+        android:textSize="100sp"
+        android:layout_below="@id/zuhr"
+        android:layout_alignStart="@id/zuhr"
+        />
+    <TextView
+        android:id="@+id/maghrib"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Maghrib"
+        android:textSize="100sp"
+        android:layout_below="@id/asr"
+        android:layout_alignStart="@id/asr"
+        />
+    <TextView
+        android:id="@+id/isha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Isha"
+        android:textSize="100sp"
+        android:layout_below="@id/maghrib"
+        android:layout_alignStart="@id/maghrib"
+        />
+    <TextView
+        android:id="@+id/Jummah"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Jummah"
+        android:textSize="100sp"
+        android:layout_below="@id/isha"
+        android:layout_alignStart="@id/isha"
+        />
+
+    <TextView
+        android:id="@+id/fahir_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="6:30 AM"
+        android:textSize="100sp"
+        android:layout_below="@id/mosque_name"
+        android:layout_centerHorizontal="true"
+        android:layout_toRightOf="@id/fajir"
+        android:layout_marginTop="44dp"
+        android:layout_marginLeft="400dp"
+        />
+
+    <TextView
+        android:id="@+id/zuhr_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1:30 PM"
+        android:textSize="100sp"
+        android:layout_below="@id/fahir_time"
+        android:layout_centerHorizontal="true"
+        android:layout_toRightOf="@id/zuhr"
+        android:layout_alignStart="@id/fahir_time"
+        />
+
+    <TextView
+        android:id="@+id/asr_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="3:00 PM"
+        android:textSize="100sp"
+        android:layout_below="@id/zuhr_time"
+        android:layout_centerHorizontal="true"
+        android:layout_toRightOf="@id/asr"
+        android:layout_alignStart="@id/zuhr_time"
+        />
+
+    <TextView
+        android:id="@+id/mag_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="5:30 PM"
+        android:textSize="100sp"
+        android:layout_below="@id/asr_time"
+        android:layout_centerHorizontal="true"
+        android:layout_toRightOf="@id/asr"
+        android:layout_alignStart="@id/asr_time"
+        />
+
+    <TextView
+        android:id="@+id/isha_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="8:30 PM"
+        android:textSize="100sp"
+        android:layout_below="@id/mag_time"
+        android:layout_centerHorizontal="true"
+        android:layout_toRightOf="@id/isha"
+        android:layout_alignStart="@id/mag_time"
+        />
+
+    <TextView
+        android:id="@+id/jum_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="10:00 PM"
+        android:textSize="100sp"
+        android:layout_below="@id/isha_time"
+        android:layout_centerHorizontal="true"
+        android:layout_toRightOf="@id/isha"
+        android:layout_alignStart="@id/isha_time"
+        />
+</RelativeLayout>
